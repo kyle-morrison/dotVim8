@@ -1,27 +1,33 @@
+"Temporary solution to load vimtex
+"let &rtp = '~/.vim/pack/plugins/opt/vimtex,' . &rtp
+"let &rtp .= ',~/.vim/pack/plugins/opt/vimtex/after'
+
 syntax enable
 filetype plugin indent on
-"set background=dark
-"colorscheme solarized
-"let g:solarized_termcolors=256
+let g:gruvbox_italic=1
+colorscheme gruvbox
+set background=dark
+
+"Line below for starting vim with vimtex background compilation
+"vim --servername NAME anotherTest.tex
 
 "For fuzzy finding make sure I know where it is
-"set rtp+=/usr/local/opt/fzf
+set rtp+=~/.fzf
 
 "When switch from vim save that current buffer if needed
-"let g:tmux_navigator_save_on_switch = 1
+let g:tmux_navigator_save_on_switch = 1
 
 "Actually creates vertical split
-"let g:VimuxOrientation = "h"
+let g:VimuxOrientation = "h"
 
-"let g:airline#extensions#tabline#enabled = 1
-"let g:airline_solarized_bg='dark'
+let g:airline#extensions#tabline#enabled = 1
 
-"let g:UltiSnipsExpandTrigger="<c-b>"
-"let g:UltiSnipsJumpForwardTrigger="<c-b>"
-"let g:UltiSnipsJumpBackwardTrigger="<c-y>"
-"let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsExpandTrigger="<c-b>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-y>"
+let g:UltiSnipsEditSplit="vertical"
 
-"let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
+let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 
 "let g:ale_linters = {
 "\   'javascript': ['jshint'],
@@ -35,8 +41,8 @@ filetype plugin indent on
 "let g:ale_lint_on_enter = 0
 "let g:ale_lint_on_filetype_changed = 0
 
-"let g:vimtex_view_method='skim'
-"let g:tex_flavor='latex'
+let g:vimtex_view_method='zathura'
+let g:tex_flavor='latex'
 
 set sessionoptions-=options
 
